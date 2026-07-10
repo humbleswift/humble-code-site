@@ -4,16 +4,14 @@ Static site, no build step. Structure:
 
 ```
 index.html
-styles.css
+terms.html          (shared Terms & Conditions — applies to all apps)
 learn-animals/
   privacy.html
-  terms.html
 learn-animals-pro/
   privacy.html
-  terms.html
 ```
 
-Each app has its own privacy policy and terms. App Store Connect URLs to use once live:
+Each app has its own privacy policy; the Terms & Conditions are shared across all Humble Code apps (linked from the Legal section on the home page). App Store Connect URLs to use once live:
 - Learn Animals privacy: `https://humble-code.com/learn-animals/privacy.html`
 - Learn Animals Pro privacy: `https://humble-code.com/learn-animals-pro/privacy.html`
 
@@ -39,13 +37,13 @@ Each app has its own privacy policy and terms. App Store Connect URLs to use onc
 
 ## Before you publish — fill in the placeholders
 
-- `index.html`: swap the two `apps.apple.com/app/idXXXXXXXXX` links for your real App Store URLs, and update the contact email if `info@humble-code.com` isn't right.
-- Privacy pages are done (lifted from your app bundle). The per-app `terms.html` files still have `[bracketed]` placeholders (in-app purchases, jurisdiction, date) that need filling.
+- `index.html`: App Store links are set; update the contact email if `info@humble-code.com` isn't right.
+- Privacy pages are done (lifted from your app bundle). The shared `terms.html` still has `[bracketed]` placeholders (jurisdiction, date) that need filling.
 - The `[date]` placeholders on both privacy pages need a real "last updated" date.
 - Optional: replace the "LA" text icons with your real app icon images — just swap the `.app-icon` div for an `<img>` tag pointing to an icon file you add to the repo.
 
 ## Adding your next app later
 
-1. Duplicate one of the app folders (e.g. copy `learn-animals-pro/` to `new-app/`), edit the privacy and terms content for the new app.
-2. Duplicate one `<article class="app-card">` block in `index.html`, update the name/tagline/App Store link, and point its Privacy/Terms links at the new folder.
+1. Duplicate one of the app folders (e.g. copy `learn-animals-pro/` to `new-app/`), edit the privacy content for the new app. The shared `terms.html` already covers it.
+2. Duplicate one `<article class="app-card">` block in `index.html`, update the name/tagline/App Store link, and point its Privacy link at the new folder.
 3. Use `https://humble-code.com/new-app/privacy.html` as the Privacy Policy URL in App Store Connect.
