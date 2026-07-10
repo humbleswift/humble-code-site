@@ -39,7 +39,7 @@ Each app has its own privacy policy and terms. App Store Connect URLs to use onc
 
 ## Before you publish — fill in the placeholders
 
-- `index.html`: swap the two `apps.apple.com/app/idXXXXXXXXX` links for your real App Store URLs, and update the contact email if `contact@humble-code.com` isn't right.
+- `index.html`: swap the two `apps.apple.com/app/idXXXXXXXXX` links for your real App Store URLs, and update the contact email if `info@humble-code.com` isn't right.
 - Privacy pages are done (lifted from your app bundle). The per-app `terms.html` files still have `[bracketed]` placeholders (in-app purchases, jurisdiction, date) that need filling.
 - The `[date]` placeholders on both privacy pages need a real "last updated" date.
 - Optional: replace the "LA" text icons with your real app icon images — just swap the `.app-icon` div for an `<img>` tag pointing to an icon file you add to the repo.
