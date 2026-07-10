@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Learn Animals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   Humble Code — shared styles
+   Tokens: warm charcoal background, ivory text, muted brass accent.
+   Display: Fraunces · Body: Inter · Utility: IBM Plex Mono
+   ========================================================================== */
+
+:root {
+  --bg: #14161a;
+  --surface: #1b1e23;
+  --surface-2: #22262b;
+  --ink: #edeae3;
+  --ink-muted: #9b9f94;
+  --brass: #c9a227;
+  --brass-soft: rgba(201, 162, 39, 0.14);
+  --sage: #7c8d70;
+  --line: rgba(237, 234, 227, 0.09);
+  --radius: 14px;
+  --max-w: 760px;
+}
+
+* { box-sizing: border-box; }
+
+html { color-scheme: dark; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in { animation: fadeIn 0.7s ease-out both; }
+  .fade-in.delay-1 { animation-delay: 0.08s; }
+  .fade-in.delay-2 { animation-delay: 0.16s; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.wrap {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding: 88px 0 56px;
+  text-align: center;
+}
+
+.mark {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 28px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Fraunces', serif;
+  font-size: 17px;
+  letter-spacing: 0.02em;
+  color: var(--brass);
+}
+
+.eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin: 0 0 18px;
+}
+
+.hero h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: clamp(32px, 5vw, 44px);
+  line-height: 1.2;
+  margin: 0 0 18px;
+  letter-spacing: -0.01em;
+}
+
+.lede {
+  color: var(--ink-muted);
+  font-size: 17px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* ---------- Section label ---------- */
+
+.section-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin: 0 0 24px;
+}
+
+main { padding-bottom: 40px; }
+
+section { padding: 40px 0; border-top: 1px solid var(--line); }
+
+/* ---------- App cards ---------- */
+
+.app-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 560px) {
+  .app-grid { grid-template-columns: 1fr; }
+}
+
+.app-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.app-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(201, 162, 39, 0.35);
+}
+
+.app-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 13px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Fraunces', serif;
+  font-size: 15px;
+  color: var(--ink-muted);
+  margin-bottom: 18px;
+}
+
+.app-icon--pro {
+  color: var(--brass);
+  border-color: rgba(201, 162, 39, 0.3);
+}
+
+.app-card h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 20px;
+  margin: 0 0 6px;
+}
+
+.tagline {
+  color: var(--ink-muted);
+  font-size: 14.5px;
+  margin: 0 0 20px;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 14px;
+  padding: 9px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover {
+  border-color: var(--brass);
+  background: var(--brass-soft);
+}
+
+/* ---------- Legal section (index) ---------- */
+
+.legal p { color: var(--ink-muted); margin: 0 0 18px; }
+
+.legal-links {
+  display: flex;
+  gap: 20px;
+}
+
+.legal-links a {
+  font-size: 14.5px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 2px;
+}
+
+.legal-links a:hover { border-color: var(--brass); color: var(--brass); }
+
+/* ---------- Footer ---------- */
+
+footer {
+  padding: 40px 0 60px;
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+
+.contact-link {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  color: var(--brass);
+}
+
+.contact-link:hover { text-decoration: underline; }
+
+.fine {
+  color: var(--ink-muted);
+  font-size: 13px;
+  margin: 14px 0 0;
+}
+
+/* ---------- Legal pages (privacy / terms) ---------- */
+
+.legal-page { padding: 64px 0 80px; }
+
+.back-link {
+  display: inline-block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  color: var(--ink-muted);
+  margin-bottom: 36px;
+}
+
+.back-link:hover { color: var(--brass); }
+
+.legal-page h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 30px;
+  margin: 0 0 8px;
+}
+
+.updated {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12.5px;
+  color: var(--ink-muted);
+  margin: 0 0 44px;
+}
+
+.legal-page h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 19px;
+  margin: 36px 0 12px;
+}
+
+.legal-page p, .legal-page li {
+  color: var(--ink-muted);
+  font-size: 15px;
+}
+
+.legal-page ul { padding-left: 20px; }
+
+.legal-page a.inline { color: var(--brass); border-bottom: 1px solid transparent; }
+.legal-page a.inline:hover { border-color: var(--brass); }
+
+.placeholder {
+  background: var(--brass-soft);
+  border: 1px dashed rgba(201, 162, 39, 0.4);
+  border-radius: 8px;
+  padding: 2px 6px;
+  color: var(--ink);
+  font-style: normal;
+}
+
+</style>
+</head>
+<body>
+
+<div class="wrap legal-page">
+  <a href="../index.html" class="back-link">&larr; Humble Code</a>
+
+  <h1>Privacy Policy</h1>
+  <p class="updated">Learn Animals — Name Sounds · Last updated: <span class="placeholder">[date]</span></p>
+
+  <p>This policy applies to you and Mohibur Rahman, Humble Code, the Developer of Learn Animals - Name Sounds, irrespective of your country of residence or location. This Policy describes our privacy practices in plain language, keeping legal and technical jargon to a minimum to make sure you understand the information we collect, why we collect it, how it is used and your choices regarding your information.</p>
+
+  <h2>Where this privacy policy applies</h2>
+  <p>This privacy policy applies to the Learn Animals - Name Sounds app. For simplicity, we refer to all of these as our &ldquo;services&rdquo; in this Privacy Policy. When the word &ldquo;we&rdquo; is used, it describes the controller of the App and includes the relevant service providers that help us to make the services available to you.</p>
+  <p>Doing so, we at all times adhere to the strict provisions of UK&rsquo;s Data Protection Act 2018 (DPA), the European General Data Protection Regulation ("GDPR").</p>
+  <p>When designing the app, we have made sure that no information that directly identifies you is collected. As however some countries including the EU have a broad definition of personal data, this policy covers it. In this sense we would need to first of all explore the definition of personal data.</p>
+  <p>"Personal data" means any information relating to an identified or identifiable natural person (hereinafter "data subject"); an identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number, IP address, Device IP, an online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person.</p>
+
+  <h2>Who controls the processing of my personal data? Who is accountable for it?</h2>
+  <p>Data processing on this website is carried out by:</p>
+  <p>Mohibur Rahman, Humble Code, the Developer of Learn Animals - Name Sounds (hereinafter "Humble Code", "we" or &ldquo;us&rdquo;). You can contact us at any time regarding this and other questions on the subject of data protection via email on <a href="mailto:info@humble-code.com" class="inline">info@humble-code.com</a>.</p>
+
+  <h2>Information we collect</h2>
+  <p>To help you enjoy our app, we collect some basic technical data as you use our services, for example access logs, as well as information from third parties. If you want additional information, we go into more detail below.</p>
+  <p>If you contact us, the data you provide will be stored so that your message can be forwarded to the correct contact person. This is done in accordance with our legitimate interest to process your request. Your data provided will not be used for any other purposes, in particular not for advertising.</p>
+
+  <h2>Google Admob</h2>
+  <p>The app uses the Google Admob service to display ads. Ads are personalised based on the device you are using. You can disable this via the settings on your device. Google may use the advertising ID of your device, as well as cookies and/or similar technologies, to collect personal data for the purpose of generating and displaying personalised advertising. More detailed information about what data Google collects and how it is processed can be found here: <a href="https://www.google.com/policies/technologies/ads" class="inline">https://www.google.com/policies/technologies/ads</a>.</p>
+  <p>In accordance with Google&rsquo;s own Guidance: To improve the performance of AdMob, the Google Mobile Ads SDK may collect certain information from apps, including:</p>
+  <ul>
+    <li>IP address, which may be used to estimate the general location of a device.</li>
+    <li>Non-user related crash logs, which may be used to diagnose problems and improve the SDK. Diagnostic information may also be used for advertising and analytics purposes.</li>
+    <li>User-associated performance data such as app launch time, hang rate, or energy usage, which may be used to evaluate user behaviour, understand the effectiveness of existing product features, and plan new features. Performance data may also be used for displaying ads, including sharing with other entities that display ads.</li>
+    <li>A Device ID such as the device's advertising identifier or other app-bounded device identifiers, which may be used for the purpose of third-party advertising and analytics.</li>
+    <li>Advertising data, such as advertisements the user has seen, may be used to power analytics and advertising features.</li>
+    <li>Other user product interactions like app launch taps, and interaction information, like video views, may be used to improve advertising performance.</li>
+  </ul>
+
+  <h2>Advertising</h2>
+  <p>Advertisers and third parties also may collect information about your activity on our app, on devices associated with you, and on third-party sites and applications using tracking technologies. Tracking data collected by these advertisers and third parties is used to decide which ads you see both on our app and on third-party sites and applications. You can opt out on the Digital Advertising Alliance (DAA) if you wish not to receive targeted advertising. You may also be able to choose to control targeted advertising on other websites and platforms that you visit. In addition, you may also choose to control targeted advertising you receive within applications by using the settings and controls on your devices.</p>
+
+  <h2>Advertising Networks and Their Partners</h2>
+  <p>In order to provide personalised advertisements, those listed below use device information that include personal and non-personal information, such as advertising (or ad) identifiers, IP address regarding the delivery of advertisements and your interaction with them and/or other tracking technologies to enable and optimise this advertising procedure. Ad identifiers are non-permanent device identifiers such as Apple&rsquo;s ID for advertising (IDFA).</p>
+
+  <h2>Downloading the app</h2>
+  <p>We have no influence on and are not responsible for the collection of data required to download the app from the app store, e.g., username, email address and customer number of your account and time of download. When using the app, we collect data for support purposes (device name, device type, OS model information).</p>
+
+  <h2>Installation of our APP</h2>
+  <p>You can use the Apple service "App Store" a service of Apple Distribution International Ltd, Hollyhill Industrial Estate, Hollyhill Ln, Knocknaheeney, Cork, Ireland, to install our app.</p>
+  <p>As far as we are aware, Apple collects and processes the following data;</p>
+  <ul>
+    <li>device identifiers,</li>
+    <li>IP addresses,</li>
+    <li>location information,</li>
+  </ul>
+  <p>It cannot be excluded that Apple also transmits the information to a server in a third country. This could in particular be Apple Inc. One Apple Park Way, Cupertino, California, USA, 95014. We cannot influence which personal data Apple processes with your registration and the provision of downloads in the respective app store and app store software. The responsible party in this respect is solely Apple as the operator of the Apple App Store. You can find more detailed information in Apple's privacy policy, which you can access here: <a href="https://www.apple.com/legal/privacy/" class="inline">https://www.apple.com/legal/privacy/</a>.</p>
+
+  <h2>How we use information</h2>
+  <p>The main reason we use your information is to deliver and improve our services. Additionally, we use this info to help keep you safe. Read on for a more detailed explanation of the various reasons we use your information, together with practical examples.</p>
+  <ul>
+    <li>To provide our services to you,</li>
+    <li>To create and manage our App and provide new features,</li>
+    <li>To improve our services and develop new ones,</li>
+    <li>To conduct research and analysis of users&rsquo; behaviour to improve our services and content (for instance, we may decide to change the look and feel or even substantially modify a given feature based on users&rsquo; behaviour),</li>
+    <li>To prevent, detect and fight fraud or other illegal or unauthorised activities,</li>
+    <li>To perform data analysis to better understand and design countermeasures against these activities,</li>
+    <li>To ensure legal compliance,</li>
+    <li>To assist law enforcement,</li>
+    <li>To enforce or exercise our rights.</li>
+  </ul>
+  <p>To process your information as described above, we rely on the following legal bases:</p>
+
+  <h2>Provide our service to you</h2>
+  <p>Most of the time, the reason we process your information is to perform the contract that you have with us. For instance, as you go about using our service or when you download the game through Apple&rsquo;s App Store.</p>
+
+  <h2>Legitimate interests</h2>
+  <p>We may use your information where we have legitimate interests to do so. For instance, we analyse users&rsquo; behaviour on our services to continuously improve our offerings, we suggest offers we think might interest you, and we process information for administrative, fraud detection and other legal purposes.</p>
+
+  <h2>Consent</h2>
+  <p>From time to time, we may ask for your consent to use your information for certain specific reasons. You may withdraw your consent at any time by contacting us at the address provided at the end of this Privacy Policy.</p>
+
+  <h2>How we share information</h2>
+  <p>We use third parties to help us operate and improve our services. These third parties assist us with various tasks, including data hosting and maintenance, analytics, payment for additional content and security operations.</p>
+  <p>We may disclose your information if reasonably necessary: (i) to comply with a legal process, such as a court order, subpoena or search warrant, government / law enforcement investigation or other legal requirements; (ii) to assist in the prevention or detection of crime (subject in each case to applicable law); or (iii) to protect the safety of any person.</p>
+  <p>We may also share information: (i) if disclosure would mitigate our liability in an actual or threatened lawsuit; (ii) as necessary to protect our legal rights and legal rights of our users, business partners or other interested parties; (iii) to enforce our agreements with you; and (iv) to investigate, prevent, or take other action regarding illegal activity, suspected fraud or other wrongdoing.</p>
+
+  <h2>With your consent or at your request</h2>
+  <p>We may ask for your consent to share your information with third parties. In any such case, we will make it clear why we want to share the information. This for example includes when you are agreeing to our privacy policy or downloading our app from Apple&rsquo;s App Store.</p>
+  <p>We may use and share non-personal information (meaning information that, by itself, does not identify who you are such as device information, general demographics, general behavioural data,), as well as personal information in hashed, non-human readable form, under any of the above circumstances.</p>
+
+  <h2>Updating your information</h2>
+  <p>If you believe that the information we hold about you, if any, is inaccurate or that we are no longer entitled to use it and want to request its rectification, deletion or object to its processing, please contact us. For your protection and the protection of all of our users, we may ask you to provide proof of identity before we can answer the above requests. Keep in mind, we may reject requests for certain reasons, including if the request is unlawful or if it may infringe on trade secrets or intellectual property or the privacy of another user. If you wish to receive information relating to another user, such as a copy of any messages you received from him or her through our service, the other user will have to contact us to provide their written consent before the information is released. Also, we may not be able to accommodate certain requests to object to the processing of personal information, notably where such requests would not allow us to provide our service to you anymore.</p>
+
+  <h2>Uninstall</h2>
+  <p>You can stop all information collection by our app by uninstalling it using the standard uninstall process for your device.</p>
+
+  <h2>How we protect your information</h2>
+  <p>We work hard to protect you from unauthorised access to or alteration, disclosure, or destruction of information. As with all technology companies, although we take steps to secure your information, we do not promise, and you should not expect, that your personal information will always remain secure.</p>
+  <p>We regularly monitor our systems for possible vulnerabilities and attacks and regularly review our information collection, storage, and processing practices to update our physical, technical and organisational security measures.</p>
+  <p>We may suspend your use of all or part of the services without notice if we suspect or detect any breach of security.</p>
+
+  <h2>How long we retain your information</h2>
+  <p>We keep your personal information only as long as we need it for legitimate business purposes and as permitted by applicable law. In practice, we delete or anonymise your information upon deletion of your account (following the safety retention window) or after two years of continuous inactivity, unless:</p>
+  <ul>
+    <li>we must keep it to comply with applicable law;</li>
+    <li>we must keep it to evidence our compliance with applicable law;</li>
+    <li>there is an outstanding issue, claim or dispute requiring us to keep the relevant information until it is resolved; or</li>
+    <li>the information must be kept for our legitimate business interests, such as fraud prevention and enhancing users&rsquo; safety and security.</li>
+  </ul>
+
+  <h2>Data transfer to the USA and other third countries</h2>
+  <p>Among other things, we use tools from companies based in the USA or other third countries that are not secure under data protection law. If these tools are active, your personal data may be transferred to these third countries and processed there. We would like to point out that no level of data protection comparable to that in the UK and the EU can be guaranteed in these countries. For example, US companies are obliged to hand over personal data to security authorities without you as a data subject being able to take legal action against this. It can therefore not be ruled out that US authorities (e.g., intelligence services) process, evaluate and permanently store your data located on US servers for monitoring purposes. We have no influence on these processing activities.</p>
+
+  <h2>Accountability</h2>
+  <p>In certain countries, including in the European Union, you have a right to lodge a complaint with the appropriate data protection authority if you have concerns about how we process information. The data protection authority you can lodge a complaint with notably may be that of your habitual residence, where you work or where we are established.</p>
+
+  <h2>Your rights</h2>
+  <p>Please contact us at any time with questions and suggestions regarding data protection and to enforce your rights as a data subject. These rights are standardised in Art. 15 - 22 GDPR. This includes:</p>
+  <ul>
+    <li>The right to information,</li>
+    <li>The right to erasure,</li>
+    <li>The right to rectification,</li>
+    <li>The right to data portability,</li>
+    <li>The right to restriction of data processing,</li>
+    <li>The right to object to data processing.</li>
+  </ul>
+  <p>To assert these rights, please contact us. The same applies if you have questions about data processing in our company. You also have the right to lodge a complaint with a data protection supervisory authority.</p>
+  <p>The Information Commissioner&rsquo;s Office (ICO) is the for us relevant authority in matters of data protection. Website (<a href="https://ico.org.uk/" class="inline">https://ico.org.uk/</a>). We would, however, appreciate the chance to deal with your concerns before you approach the ICO so please contact us in the first instance.</p>
+
+  <h2>Legal Bases for Processing (Article 6 GDPR)</h2>
+  <p>The processing of your personal data may be based on the following legal grounds:</p>
+  <ul>
+    <li>consent serves as our legal basis for processing operations where we obtain your consent for a specific processing purpose.</li>
+    <li>contract, insofar as the processing of personal data is necessary for the performance of a contract, e.g., if you purchase a product. The same applies to such processing operations that are necessary for the performance of pre-contractual measures, for example in the case of enquiries about our products or services.</li>
+    <li>Legal obligation, insofar as we are subject to a legal obligation that requires the processing of personal data, such as for the fulfilment of tax obligations.</li>
+    <li>vital interest, in the event that vital interests of you or another natural person require the processing of personal data.</li>
+    <li>legitimate interest, applies on the basis of our legitimate interests, e.g., when using service providers as part of order processing, such as payment service providers or when carrying out statistical surveys and analyses and logging registration procedures. Our interest is directed towards the use of a user-friendly, appealing, and secure presentation as well as optimisation of our website, which serves our business interests as well as meeting your expectations.</li>
+  </ul>
+
+  <h2>Revocation of your consent to data processing</h2>
+  <p>Many data processing operations are only possible with your express consent. You can revoke consent you have already given at any time. The legality of the data processing carried out until the revocation remains unaffected by the revocation.</p>
+
+  <h2>Automated decision-making</h2>
+  <p>We do not use automated decision-making or profiling.</p>
+
+  <h2>Do Not Sell My Personal Information</h2>
+  <p>We do not sell information that directly identifies you, like your name, address or phone records.</p>
+
+  <h2>Accuracy</h2>
+  <p>It is important that the data we hold about you is accurate and current, therefore please keep us informed of any changes to your personal data.</p>
+
+  <h2>Changes and updates to the privacy policy</h2>
+  <p>We kindly ask you to regularly inform yourself about the content of our privacy policy. We will amend the privacy policy as soon as changes to the data processing activities we carry out make this necessary. We will inform you as soon as the changes require an act of cooperation on your part (e.g., consent) or other individual notification.</p>
+
+  <h2>Queries and Complaints</h2>
+  <p>Any comments or queries on this policy should be directed to us. If you believe that we have not complied with this policy or acted otherwise than in accordance with data protection law, then you should notify us. You can also make a referral to, or lodge a complaint with, ICO.</p>
+</div>
+
+</body>
+</html>
