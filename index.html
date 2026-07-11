@@ -164,6 +164,14 @@ section { padding: 40px 0; border-top: 1px solid var(--line); }
   font-size: 15px;
   color: var(--ink-muted);
   margin-bottom: 18px;
+  overflow: hidden;
+}
+
+.app-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
 }
 
 .app-icon--pro {
@@ -329,7 +337,9 @@ footer {
       <div class="app-grid">
 
         <article class="app-card">
-          <div class="app-icon" aria-hidden="true">LA</div>
+          <div class="app-icon">
+            <img src="learn-animals/icon.png" alt="Learn Animals app icon">
+          </div>
           <h3>Learn Animals</h3>
           <p class="tagline">Free — a gentle first look at the animal kingdom.</p>
           <div class="app-links">
@@ -341,7 +351,9 @@ footer {
         </article>
 
         <article class="app-card">
-          <div class="app-icon app-icon--pro" aria-hidden="true">LA</div>
+          <div class="app-icon app-icon--pro">
+            <img src="learn-animals-pro/icon.png" alt="Learn Animals Pro app icon">
+          </div>
           <h3>Learn Animals Pro</h3>
           <p class="tagline">The full collection, ad-free.</p>
           <div class="app-links">
