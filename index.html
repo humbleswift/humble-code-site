@@ -134,6 +134,14 @@ section { padding: 40px 0; border-top: 1px solid var(--line); }
   gap: 16px;
 }
 
+.development .app-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 700px) {
+  .development .app-grid { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 560px) {
   .app-grid { grid-template-columns: 1fr; }
 }
@@ -401,6 +409,15 @@ footer {
           </div>
           <h3>Matn</h3>
           <p class="tagline">A new app currently taking shape.</p>
+          <div class="development-status">In development</div>
+        </article>
+
+        <article class="app-card">
+          <div class="app-icon">
+            <img src="alfurqan/icon.png" alt="AlFurqan app icon">
+          </div>
+          <h3>AlFurqan</h3>
+          <p class="tagline">A focused way to read, understand, and reflect on the Qur’an.</p>
           <div class="development-status">In development</div>
         </article>
 
