@@ -236,7 +236,20 @@ section { padding: 40px 0; border-top: 1px solid var(--line); }
   font-family: 'IBM Plex Mono', monospace;
   font-size: 12.5px;
   color: var(--sage);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
 }
+
+.beta-link {
+  color: var(--brass);
+  border-bottom: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.beta-link:hover { border-color: var(--brass); }
 
 /* ---------- Legal section (index) ---------- */
 
@@ -392,7 +405,10 @@ footer {
           </div>
           <h3>Learn Animals 2.0</h3>
           <p class="tagline">A major overhaul with new features and a refreshed experience.</p>
-          <div class="development-status">v2.0 · Build 43</div>
+          <div class="development-status">
+            <span>v2.0 · Build 43</span>
+            <a href="https://testflight.apple.com/join/vYrgT9fs" class="beta-link">Join the beta &rarr;</a>
+          </div>
         </article>
 
         <article class="app-card">
