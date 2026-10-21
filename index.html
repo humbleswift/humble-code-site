@@ -251,6 +251,13 @@ section { padding: 40px 0; border-top: 1px solid var(--line); }
 
 .beta-link:hover { border-color: var(--brass); }
 
+.status-link {
+  color: var(--ink-muted);
+  white-space: nowrap;
+}
+
+.status-link:hover { color: var(--brass); }
+
 .app-footnote {
   margin: 28px 0 0;
   font-size: 13.5px;
@@ -408,7 +415,10 @@ footer {
           </div>
           <h3>Grounded</h3>
           <p class="tagline">Curated, verified facts—delivered daily to your Home Screen and Apple Watch.</p>
-          <div class="development-status">v1.0 · Build 1</div>
+          <div class="development-status">
+            <span>v1.0 · Build 1</span>
+            <a href="grounded/privacy.html" class="status-link">Privacy</a>
+          </div>
         </article>
 
         <article class="app-card">
