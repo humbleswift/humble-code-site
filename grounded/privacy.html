@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Grounded: Facts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   Humble Code — shared styles
+   Tokens: warm charcoal background, ivory text, muted brass accent.
+   Display: Fraunces · Body: Inter · Utility: IBM Plex Mono
+   ========================================================================== */
+
+:root {
+  --bg: #14161a;
+  --surface: #1b1e23;
+  --surface-2: #22262b;
+  --ink: #edeae3;
+  --ink-muted: #9b9f94;
+  --brass: #c9a227;
+  --brass-soft: rgba(201, 162, 39, 0.14);
+  --sage: #7c8d70;
+  --line: rgba(237, 234, 227, 0.09);
+  --radius: 14px;
+  --max-w: 760px;
+}
+
+* { box-sizing: border-box; }
+
+html { color-scheme: dark; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in { animation: fadeIn 0.7s ease-out both; }
+  .fade-in.delay-1 { animation-delay: 0.08s; }
+  .fade-in.delay-2 { animation-delay: 0.16s; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.wrap {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding: 88px 0 56px;
+  text-align: center;
+}
+
+.mark {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 28px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Fraunces', serif;
+  font-size: 17px;
+  letter-spacing: 0.02em;
+  color: var(--brass);
+}
+
+.eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin: 0 0 18px;
+}
+
+.hero h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: clamp(32px, 5vw, 44px);
+  line-height: 1.2;
+  margin: 0 0 18px;
+  letter-spacing: -0.01em;
+}
+
+.lede {
+  color: var(--ink-muted);
+  font-size: 17px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* ---------- Section label ---------- */
+
+.section-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin: 0 0 24px;
+}
+
+main { padding-bottom: 40px; }
+
+section { padding: 40px 0; border-top: 1px solid var(--line); }
+
+/* ---------- App cards ---------- */
+
+.app-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 560px) {
+  .app-grid { grid-template-columns: 1fr; }
+}
+
+.app-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.app-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(201, 162, 39, 0.35);
+}
+
+.app-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 13px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Fraunces', serif;
+  font-size: 15px;
+  color: var(--ink-muted);
+  margin-bottom: 18px;
+}
+
+.app-icon--pro {
+  color: var(--brass);
+  border-color: rgba(201, 162, 39, 0.3);
+}
+
+.app-card h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 20px;
+  margin: 0 0 6px;
+}
+
+.tagline {
+  color: var(--ink-muted);
+  font-size: 14.5px;
+  margin: 0 0 20px;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 14px;
+  padding: 9px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover {
+  border-color: var(--brass);
+  background: var(--brass-soft);
+}
+
+/* ---------- Legal section (index) ---------- */
+
+.legal p { color: var(--ink-muted); margin: 0 0 18px; }
+
+.legal-links {
+  display: flex;
+  gap: 20px;
+}
+
+.legal-links a {
+  font-size: 14.5px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 2px;
+}
+
+.legal-links a:hover { border-color: var(--brass); color: var(--brass); }
+
+/* ---------- Footer ---------- */
+
+footer {
+  padding: 40px 0 60px;
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+
+.contact-link {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  color: var(--brass);
+}
+
+.contact-link:hover { text-decoration: underline; }
+
+.fine {
+  color: var(--ink-muted);
+  font-size: 13px;
+  margin: 14px 0 0;
+}
+
+/* ---------- Legal pages (privacy / terms) ---------- */
+
+.legal-page { padding: 64px 0 80px; }
+
+.back-link {
+  display: inline-block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  color: var(--ink-muted);
+  margin-bottom: 36px;
+}
+
+.back-link:hover { color: var(--brass); }
+
+.legal-page h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 30px;
+  margin: 0 0 8px;
+}
+
+.updated {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12.5px;
+  color: var(--ink-muted);
+  margin: 0 0 44px;
+}
+
+.legal-page h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 19px;
+  margin: 36px 0 12px;
+}
+
+.legal-page p, .legal-page li {
+  color: var(--ink-muted);
+  font-size: 15px;
+}
+
+.legal-page ul { padding-left: 20px; }
+
+.legal-page a.inline { color: var(--brass); border-bottom: 1px solid transparent; }
+.legal-page a.inline:hover { border-color: var(--brass); }
+
+.placeholder {
+  background: var(--brass-soft);
+  border: 1px dashed rgba(201, 162, 39, 0.4);
+  border-radius: 8px;
+  padding: 2px 6px;
+  color: var(--ink);
+  font-style: normal;
+}
+
+</style>
+</head>
+<body>
+
+<div class="wrap legal-page">
+  <a href="../index.html" class="back-link">&larr; Humble Code</a>
+
+  <h1>Privacy Policy</h1>
+  <p class="updated">Grounded: Facts · Last updated: 21 October 2026 · Applies to version 1.0 and later</p>
+
+  <p>This policy is between you and Mohibur Rahman, trading as Humble Code, the developer of Grounded: Facts, wherever you live. It is written in plain language so you can see what information is involved when you use the app, why, and the choices you have.</p>
+
+  <h2>In short</h2>
+  <ul>
+    <li>Your reading history, saved facts, reports and settings stay on your device. They are never uploaded, and we cannot see them.</li>
+    <li>We run no servers and no accounts. The app sends anonymous usage counts to TelemetryDeck so we can see which features are used. They never include your name, your contact details or anything you type.</li>
+    <li>The free version shows adverts from Google AdMob. Google may collect some information to deliver and measure those adverts; that is described in full below.</li>
+    <li>In the UK and Europe a consent message is shown before any advertising starts. The app never asks to track you across other companies&rsquo; apps and websites.</li>
+    <li>The one-time Grounded Unlimited purchase removes the daily limit and all advertising. The purchase is handled by Apple; we never see your payment details.</li>
+  </ul>
+
+  <h2>Who we are</h2>
+  <p>Data processing in connection with the app is the responsibility of:</p>
+  <p>Mohibur Rahman, Humble Code, the developer of Grounded: Facts (&ldquo;Humble Code&rdquo;, &ldquo;we&rdquo; or &ldquo;us&rdquo;). You can contact us about this policy or anything else to do with data protection at <a href="mailto:info@humble-code.com" class="inline">info@humble-code.com</a>.</p>
+
+  <h2>Where this policy applies</h2>
+  <p>This policy applies to the Grounded: Facts app for iPhone and its Home Screen and Lock Screen widgets, which we call the &ldquo;app&rdquo; or the &ldquo;service&rdquo;. Where we say &ldquo;we&rdquo;, that means the controller named above together with the service providers named in this policy that help make the app available. We follow the UK Data Protection Act 2018, the UK GDPR and the EU GDPR.</p>
+
+  <h2>Information stored on your device only</h2>
+  <p>The app keeps the following on your device, and nowhere else:</p>
+  <ul>
+    <li>which facts you have seen and when, which the app uses to avoid repeats and to count the free daily allowance;</li>
+    <li>the facts you have saved;</li>
+    <li>any &ldquo;Is that really true?&rdquo; report you write, including the reason you give;</li>
+    <li>your settings: theme, and whether and when you want a daily fact notification;</li>
+    <li>whether you have seen the first-use hint;</li>
+    <li>a cached copy of whether Grounded Unlimited is unlocked, so the app works offline.</li>
+  </ul>
+  <p>None of this is uploaded. We cannot see it, and deleting the app deletes it. Reports are kept on your device in this version; if you want us to see one, please email it to us as well.</p>
+
+  <h2>What we do not do</h2>
+  <p>We do not ask you to create an account. We do not use crash-reporting services of our own. We do not collect your name, email address, contacts, photos or precise location. The app never asks to track you, and does not use the advertising identifier. We do not sell personal information.</p>
+
+  <h2>Usage statistics (TelemetryDeck)</h2>
+  <p>To learn which parts of the app are used, the app sends anonymous usage counts to TelemetryDeck, a privacy-focused analytics service run by TelemetryDeck GmbH of Augsburg, Germany. A short message is sent when certain things happen:</p>
+  <ul>
+    <li>the app is opened, together with how many facts you have seen, how many the app contains, and whether Grounded Unlimited is active;</li>
+    <li>a fact&rsquo;s source is opened, and from where (the feed, your saved facts or a widget), and when you go on to the source itself;</li>
+    <li>a fact is saved, shared or reported, identified only by which fact it was;</li>
+    <li>the free daily allowance is reached;</li>
+    <li>the Grounded Unlimited screen is shown, and a purchase is completed or restored.</li>
+  </ul>
+  <p>Each message also carries basic technical details: device model, iOS and app version, screen size, language and region, time zone, and display settings such as text size. Messages never include your name, contact details, location or anything you type, such as the reason you give when you report a fact.</p>
+  <p>So that a returning copy of the app can be counted as the same one, the app takes the identifier Apple gives this app on your device and scrambles it with a one-way hash before it is sent. TelemetryDeck never receives the identifier itself and cannot work out who you are. This information is used only to improve the app; it is not used for advertising and not combined with anything else. TelemetryDeck&rsquo;s own policy: <a href="https://telemetrydeck.com/privacy/" class="inline">telemetrydeck.com/privacy</a>.</p>
+
+  <h2>Advertising and your choices</h2>
+  <p>The free version of Grounded: Facts is funded by adverts served by Google AdMob, part of Google (Google Ireland Limited for users in the UK and the European Economic Area; Google LLC elsewhere). Adverts appear as clearly labelled cards between facts. You are always in control of how advertising works for you.</p>
+  <ul>
+    <li><strong>No tracking.</strong> The app never shows Apple&rsquo;s App Tracking Transparency prompt and does not use your device&rsquo;s advertising identifier, so adverts are never personalised using your activity in other companies&rsquo; apps and websites.</li>
+    <li><strong>Consent in the UK and Europe.</strong> If you are in the UK or the European Economic Area, a consent message is shown after you first swipe to a second fact, and before any advertising begins, in line with the GDPR and Google&rsquo;s EU User Consent Policy. You can review or change your choices at any time via &ldquo;Advertising privacy choices&rdquo; in the app&rsquo;s Settings, which appears for users in those regions.</li>
+    <li><strong>Adjust Google&rsquo;s settings.</strong> You can adjust ad personalisation in your Google settings at <a href="https://adssettings.google.com/" class="inline">adssettings.google.com</a>.</li>
+    <li><strong>Remove adverts entirely.</strong> The one-time Grounded Unlimited purchase permanently removes all advertising from the app. When it is active, the Google advertising software described below is not started, no consent message is shown, and none of the advertising data below is collected.</li>
+  </ul>
+  <p>Adverts never appear on the source screen, in widgets, in notifications or on shared images.</p>
+
+  <h2>Google AdMob</h2>
+  <p>The app displays adverts using the Google Mobile Ads SDK. Google explains that, to deliver, measure and improve advertising, the SDK may collect:</p>
+  <ul>
+    <li>IP address, which may be used to estimate the general location of a device;</li>
+    <li>crash logs that are not linked to you, used to diagnose problems and improve the SDK;</li>
+    <li>performance data such as app launch time, hang rate or energy usage;</li>
+    <li>a device identifier limited to this app or this developer (the app does not make the advertising identifier available);</li>
+    <li>advertising data, such as which adverts you have seen and whether you interacted with them;</li>
+    <li>other product interactions, such as taps and video views, which may be used to improve advertising performance.</li>
+  </ul>
+  <p>Google&rsquo;s consent software also uses your general location to decide whether a consent message is needed where you are.</p>
+  <p>Google is responsible for how it uses this information. Its explanations are here:</p>
+  <ul>
+    <li>How Google uses information from apps that use its services: <a href="https://policies.google.com/technologies/partner-sites" class="inline">policies.google.com/technologies/partner-sites</a></li>
+    <li>Google&rsquo;s advertising technologies: <a href="https://policies.google.com/technologies/ads" class="inline">policies.google.com/technologies/ads</a></li>
+    <li>Google&rsquo;s privacy policy: <a href="https://policies.google.com/privacy" class="inline">policies.google.com/privacy</a></li>
+  </ul>
+
+  <h2>Measuring whether an advert led to an install</h2>
+  <p>Advertisers may find out whether an advert shown in this app led someone to install their app, using Apple&rsquo;s SKAdNetwork. Apple designed that system so the information is aggregated and delayed and does not identify you or your device.</p>
+
+  <h2>The Grounded Unlimited purchase</h2>
+  <p>&ldquo;Grounded Unlimited&rdquo; is a one-time, non-consumable in-app purchase processed by Apple. Payment happens entirely within Apple&rsquo;s App Store systems under Apple&rsquo;s privacy policy. We do not receive or store your name, payment details or Apple Account. Your entitlement is tied to your Apple Account, so you can restore it on any of your devices with &ldquo;Restore Purchases&rdquo; in the app&rsquo;s Settings or on the Grounded Unlimited screen. The app keeps only a local yes/no record of whether it is unlocked, and the anonymous usage counts above record that a purchase or restore happened.</p>
+
+  <h2>Daily fact notifications</h2>
+  <p>The app can send an optional daily notification containing a fact. It is off unless you turn it on, and it asks your permission first. Every notification is scheduled entirely on your device from the facts built into the app, and only facts marked suitable for a lock screen are used. No server is involved and nothing leaves your device. You can change the time or turn it off under &ldquo;Notifications&rdquo; in the app&rsquo;s Settings and in your device Settings.</p>
+
+  <h2>Widgets</h2>
+  <p>The Home Screen and Lock Screen widgets show the day&rsquo;s fact. They are built on your device from the facts inside the app, use only facts marked suitable for a lock screen, and send nothing anywhere.</p>
+
+  <h2>Sources and links</h2>
+  <p>Every fact links to its source. Opening a source takes you to that website in Safari, where that website&rsquo;s own privacy policy applies. We do not know which pages you go on to read, other than the anonymous count described above.</p>
+
+  <h2>Children</h2>
+  <p>Grounded: Facts is a general-audience app and is not directed at children under 13. We do not knowingly collect personal information from children; reading history stays on the device. Parents who prefer an entirely advert-free experience can use the one-time Grounded Unlimited purchase, which switches all advertising technology in the app off.</p>
+
+  <h2>If you contact us</h2>
+  <p>If you email us, we use what you send only to answer you. It is never used for advertising, and we keep it only for as long as needed to help you.</p>
+
+  <h2>Downloading the app</h2>
+  <p>Apple collects information when you download or update the app from the App Store, such as your Apple Account details and the time of download. We have no influence over that and do not receive it. It is governed by Apple&rsquo;s privacy policy: <a href="https://www.apple.com/legal/privacy/" class="inline">apple.com/legal/privacy</a>.</p>
+
+  <h2>Why we use information</h2>
+  <ul>
+    <li>to provide the app to you and keep it working reliably;</li>
+    <li>to understand which features are used, so we can improve the app and decide what to build next;</li>
+    <li>to fund the free version of the app through advertising, as described above;</li>
+    <li>to respond to you if you contact us;</li>
+    <li>to comply with the law and to establish, exercise or defend legal rights.</li>
+  </ul>
+
+  <h2>Legal bases (Article 6 UK GDPR / GDPR)</h2>
+  <ul>
+    <li><strong>Consent</strong> &mdash; advertising in the UK and EEA runs only on the basis of the choices you make in the consent message. You can withdraw consent at any time as described above. Processing carried out before withdrawal remains lawful.</li>
+    <li><strong>Contract</strong> &mdash; where processing is necessary to deliver something you have asked for, such as the Grounded Unlimited purchase.</li>
+    <li><strong>Legitimate interests</strong> &mdash; for the basic operation, security and improvement of the app, including the anonymous usage counts, which identify no one, and non-personalised advertising, which funds the free version.</li>
+  </ul>
+
+  <h2>How information is shared</h2>
+  <p>We do not sell information that directly identifies you. Anonymous usage counts are processed by TelemetryDeck on our behalf. Advertising data is processed by Google and its certified advertising partners as described in Google&rsquo;s policies linked above. We may disclose information if reasonably necessary to comply with a legal process, to assist in the prevention or detection of crime, or to protect the safety of any person.</p>
+
+  <h2>International transfers</h2>
+  <p>TelemetryDeck is based in Germany. Its hosting providers include Hetzner in Germany and Amazon Web Services, and it states that any processing outside the EU relies on safeguards recognised under EU law, such as standard contractual clauses. Google may process advertising data in the United States and other countries outside the UK and the EEA. Google states that it relies on safeguards recognised under UK and EU law for those transfers, including the EU-U.S. Data Privacy Framework with its UK Extension and standard contractual clauses. We have no influence over that processing.</p>
+
+  <h2>How long information is kept</h2>
+  <p>We keep nothing beyond any correspondence you send us, which we delete once your query is resolved and any follow-up is complete. Anonymous usage counts are kept by TelemetryDeck in accordance with its policy. Information collected by Google is kept in accordance with Google&rsquo;s retention policies: <a href="https://policies.google.com/technologies/retention" class="inline">policies.google.com/technologies/retention</a>.</p>
+
+  <h2>Your rights</h2>
+  <p>Under Articles 15 to 22 of the UK GDPR and GDPR you have the right to access, rectify and erase your personal data, to restrict or object to its processing, and to data portability. Because we hold no personal data about you beyond any email you send us, and the usage counts cannot be traced back to you, most requests will be answered by confirming exactly that. For data held by Google, you can exercise your rights directly through your Google settings and Google&rsquo;s privacy policy.</p>
+  <p>You also have the right to lodge a complaint with a data protection supervisory authority. For us that is the Information Commissioner&rsquo;s Office (ICO), <a href="https://ico.org.uk/" class="inline">ico.org.uk</a>. We would appreciate the chance to resolve any concern first, so please contact us before approaching the ICO.</p>
+
+  <h2>Security</h2>
+  <p>Your reading history, saved facts and reports never leave your device, so they are protected by your device&rsquo;s own security: your passcode, Face ID or Touch ID, and Apple&rsquo;s encryption. Usage counts and advertising data are protected in transit by standard HTTPS encryption.</p>
+
+  <h2>Uninstalling</h2>
+  <p>Uninstalling the app in the usual way deletes everything it has stored on your device and stops all usage counts and advertising immediately.</p>
+
+  <h2>Automated decision-making</h2>
+  <p>We do not use automated decision-making or profiling that produces legal or similarly significant effects concerning you.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>We will update this policy whenever a change to the app makes it necessary, for instance a change to how advertising, usage counts or purchases work, and we will show the new date at the top. Please check it from time to time.</p>
+
+  <h2>Questions and complaints</h2>
+  <p>Please direct any questions or comments about this policy to <a href="mailto:info@humble-code.com" class="inline">info@humble-code.com</a>. If you believe we have acted otherwise than as described here, please tell us.</p>
+</div>
+
+</body>
+</html>
