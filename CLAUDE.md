@@ -23,3 +23,8 @@ Static site for humble-code.com. No build step. GitHub Pages deploys `main`, so 
 
 - `app-ads.txt` is required for AdMob app verification. Do not remove or edit it unless the AdMob publisher line changes.
 - `CNAME` points the site at humble-code.com. Do not remove it.
+
+## Analytics
+
+- Every HTML page carries the GoatCounter script just before `</head>`, exactly as in `index.html`. Any new page must include it. The dashboard is at humble-code.goatcounter.com; it is cookie-free, so no consent banner is needed.
+- `index.html` has a footer line disclosing the analytics. Keep it if the footer is reworked.
