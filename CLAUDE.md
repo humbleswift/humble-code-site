@@ -27,5 +27,5 @@ Static site for humble-code.com. No build step. GitHub Pages deploys `main`, so 
 ## Analytics
 
 - Every HTML page carries the GoatCounter script just before `</head>`, exactly as in `index.html`. Any new page must include it. The dashboard is at humble-code.goatcounter.com; it is cookie-free, so no consent banner is needed.
-- `index.html` has a footer line disclosing the analytics. Keep it if the footer is reworked.
+- The home page links carry `data-goatcounter-click` attributes so App Store, privacy, terms and email clicks show as named events. Give any new App Store button one, e.g. `appstore-<app>`. No footer disclosure line is shown; the owner chose not to have one.
 - `google1a0f70b28bd0e1db.html` verifies humble-code.com in Google Search Console. Do not remove it; Google re-checks it periodically.
